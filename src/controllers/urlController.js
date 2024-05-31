@@ -33,8 +33,10 @@ class urlController {
             return res.status(404).send('URL NOT FOUND');
         }
             //increase the click count
-            url.clicks += 1;
+            url.click += 1;
+            console.log(url.click)
             await url.save();
+          
             res.redirect(url.originalUrl)
 
     } catch (err) {
