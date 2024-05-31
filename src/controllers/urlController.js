@@ -1,4 +1,4 @@
-const UrlShortener = require("../models/utils/urlShortner");
+const UrlShortener = require("../utils/urlShortner");
 const Url = require("../models/urlModels");
 
 class urlController {
