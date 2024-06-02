@@ -23,7 +23,7 @@ document.getElementById('shortenBtn').addEventListener('click', async () => {
 });
 function isValidUrl(string) {
     try {
-        newURL(string);
+        new URL(string);
         return true;
     } catch (_) {
         return false;
