@@ -7,7 +7,7 @@ document.getElementById('shortenBtn').addEventListener('click', async () => {
         return;
     }
     try {
-        const response = await fetch('/shorten', {
+        const response = await fetch('https://url-shortener-backend-seven-beta.vercel.app/shorten', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
