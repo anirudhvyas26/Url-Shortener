@@ -1,0 +1,20 @@
+{
+  "name": "urlshortner",
+  "version": "1.0.0",
+  "description": "form urlshortening",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "author": "Anirudh",
+  "license": "ISC",
+  "dependencies": {
+    "-": "^0.0.1",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "g": "^2.0.1",
+    "mongoose": "^8.4.0",
+    "vercel": "^35.1.0"
+  }
+}
