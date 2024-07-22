@@ -1,5 +1,5 @@
 // const { application, json } = require("express");
-
+const backendUrl = 'https://url-shortener-backend-seven-beta.vercel.app';
 document.getElementById('shortenBtn').addEventListener('click', async () => {
     const originalUrl = document.getElementById('originalUrl').value;
     if (!originalUrl || !isValidUrl(originalUrl)) {
@@ -7,7 +7,7 @@ document.getElementById('shortenBtn').addEventListener('click', async () => {
         return;
     }
     try {
-        const response = await fetch('https://url-shortener-backend-seven-beta.vercel.app/shorten', {
+        const response = await fetch(backendUrl+'/shorten', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -15,7 +15,7 @@ document.getElementById('shortenBtn').addEventListener('click', async () => {
             body: JSON.stringify({ originalUrl })
         });
         const data = await response.json();
-        document.getElementById('result').textContent = `shortened URL: ${window.location.href}${data.shortUrl}`;
+        document.getElementById('result').textContent = `shortened URL: ${backendUrl}/${data.shortUrl}`;
     } catch (err) {
         console.error('Error Shortening the URL :', err);
         alert('error shortening the URL PLEASE TRY AGAIN');
