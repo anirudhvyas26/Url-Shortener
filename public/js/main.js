@@ -15,7 +15,7 @@ document.getElementById('shortenBtn').addEventListener('click', async () => {
             body: JSON.stringify({ originalUrl })
         });
         const data = await response.json();
-        document.getElementById('result').textContent = `shortened URL :${window.location.href}${data.shortUrl}`;
+        document.getElementById('result').textContent = `shortened URL: ${window.location.href}${data.shortUrl}`;
     } catch (err) {
         console.error('Error Shortening the URL :', err);
         alert('error shortening the URL PLEASE TRY AGAIN');
