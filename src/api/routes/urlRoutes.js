@@ -1,5 +1,5 @@
 const express = require('express');
-const urlController = require('../../controllers/urlController');
+const urlController = require('../controllers/urlController');
 
 
 
